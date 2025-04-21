@@ -1,13 +1,15 @@
 export class Comment {
     id: number;
+    name: string;
     text: string;
     isLiked: boolean;
-    createdAt: string;
+    createdAt: Date;
 
-    constructor(text: string, isLiked: boolean = false) {
+    constructor(text: string, isLiked = false, name: string) {
         this.id = Date.now();
         this.text = text;
+        this.name = name;
         this.isLiked = isLiked;
-        this.createdAt = new Date().toISOString();
+        this.createdAt = new Date();
     }
 }

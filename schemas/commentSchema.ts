@@ -1,7 +1,8 @@
 import z from "zod"
 
 export const CommentSchema = z.object({
-    text: z.string().min(5, { message: 'Введите корректный комментарий' }),
+    name: z.string().min(1, "Имя обязательно"),
+    text: z.string().min(1, "Комментарий не может быть пустым"),
     isLiked: z.boolean()
 });
 

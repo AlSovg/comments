@@ -6,9 +6,9 @@ import {useComments} from "@/hooks/useComments";
 export default function Home() {
     const {comments} = useComments()
     return (
-        <div>
-            <CommentInput/>
-            <CommentList comments={comments}/>
+        <div className={"form"}>
+            <CommentInput className={"container"}/>
+            <CommentList className={"commentList"} comments={comments}/>
         </div>
     );
 }
