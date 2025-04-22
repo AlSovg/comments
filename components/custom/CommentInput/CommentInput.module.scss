@@ -1,0 +1,58 @@
+$form-error: #ef4444;
+$gray-text: #6c6c6c;
+
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    height: 60px;
+
+    input {
+      height: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    &-error {
+      font-size: 0.875rem;
+      color: $form-error;
+    }
+
+    &-hint {
+      font-size: 0.875rem;
+      color: $gray-text;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__button {
+    align-self: center;
+    height: 40px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .comment-form {
+    flex-direction: column;
+    align-items: stretch;
+
+    &__field {
+      width: 100%;
+      height: auto;
+
+      input {
+        height: 40px;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+}
